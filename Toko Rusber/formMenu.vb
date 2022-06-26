@@ -2,6 +2,7 @@
     Sub awal()
         tlsNama.Text = vbNullString
         tlsStatus.Text = vbNullString
+        tlsUsername.Text = vbNullString
 
         LOGINToolStripMenuItem.Visible = True
         LOGOUTToolStripMenuItem.Visible = False
@@ -20,5 +21,17 @@
     Private Sub LOGOUTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LOGOUTToolStripMenuItem.Click
         Call awal()
         formLogin.ShowDialog()
+    End Sub
+
+    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+        Me.Dispose()
+    End Sub
+
+    Private Sub LOGINToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LOGINToolStripMenuItem.Click
+        formLogin.ShowDialog()
+    End Sub
+
+    Private Sub UBAHPASSWORDToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UBAHPASSWORDToolStripMenuItem.Click
+        formUbahPass.ShowDialog()
     End Sub
 End Class

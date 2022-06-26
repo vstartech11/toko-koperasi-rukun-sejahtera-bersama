@@ -85,6 +85,12 @@
       <DependentUpon>formMenu.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formUbahPass.Designer.vb">
+      <DependentUpon>formUbahPass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formUbahPass.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="moduleKoneksi.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formUbahPass.resx">
+      <DependentUpon>formUbahPass.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

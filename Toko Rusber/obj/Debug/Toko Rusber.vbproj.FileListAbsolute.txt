@@ -11,3 +11,4 @@ C:\Users\vstar\OneDrive\Documents\Kerjaan VB\toko-koperasi-rukun-sejahtera-bersa
 C:\Users\vstar\OneDrive\Documents\Kerjaan VB\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko Rusber.exe
 C:\Users\vstar\OneDrive\Documents\Kerjaan VB\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko Rusber.xml
 C:\Users\vstar\OneDrive\Documents\Kerjaan VB\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko Rusber.pdb
+C:\Users\vstar\OneDrive\Documents\Kerjaan VB\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formUbahPass.resources
