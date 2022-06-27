@@ -5,19 +5,32 @@ Public Class formLogin
         formMenu.tlsNama.Text = Rd.Item(1).ToString
         formMenu.tlsStatus.Text = Rd.Item(3).ToString
         If formMenu.tlsStatus.Text.Equals("ADMIN") Then
-            formMenu.DATABARANGToolStripMenuItem.Visible = True
+            formMenu.DATAToolStripMenuItem.Visible = True
             formMenu.DATAKEUANGANToolStripMenuItem.Visible = True
             formMenu.DATATRANSAKSIToolStripMenuItem.Visible = True
             formMenu.DATAANGGOTAToolStripMenuItem.Visible = True
             formMenu.UBAHPASSWORDToolStripMenuItem.Visible = True
+            formMenu.KELOLAAKUNToolStripMenuItem.Visible = True
+            formMenu.DATAHUTANGToolStripMenuItem.Visible = True
+            formMenu.DATASIMPANANANGGOTAToolStripMenuItem.Visible = True
+            formMenu.DATASUPPLIERToolStripMenuItem.Visible = True
+            formMenu.BARANGKELUARToolStripMenuItem.Visible = True
+            formMenu.BARANGMASUKToolStripMenuItem.Visible = True
+            formMenu.PENJUALANToolStripMenuItem.Visible = True
+            formMenu.REKAPKASToolStripMenuItem.Visible = True
+            Call koneksi()
+            Cmd = New SqlCommand("update tblUser set lastLogin='" & DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") & "' where username='" & Rd.Item(0).ToString & "'", Conn)
+            Cmd.ExecuteNonQuery()
         ElseIf formMenu.tlsStatus.Text.Equals("CASHIER") Then
             formMenu.DATATRANSAKSIToolStripMenuItem.Visible = True
-            formMenu.BARANGKELUARToolStripMenuItem.Visible = False
-            formMenu.BARANGMASUKToolStripMenuItem.Visible = False
             formMenu.PENJUALANToolStripMenuItem.Visible = True
             formMenu.DATAKEUANGANToolStripMenuItem.Visible = True
+            formMenu.REKAPKASToolStripMenuItem.Visible = True
+            Call koneksi()
+            Cmd = New SqlCommand("update tblUser set lastLogin='" & DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") & "' where username='" & Rd.Item(0).ToString & "'", Conn)
+            Cmd.ExecuteNonQuery()
         Else
-            MsgBox("Error tidak diketahui")
+            MsgBox("STATUS AKUN TIDAK SESUAI")
 
         End If
 

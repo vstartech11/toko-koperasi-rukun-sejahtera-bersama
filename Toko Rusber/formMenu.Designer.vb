@@ -29,7 +29,7 @@ Partial Class formMenu
         Me.LOGINToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UBAHPASSWORDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LOGOUTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DATABARANGToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DATAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DATAANGGOTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DATASUPPLIERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DATASIMPANANANGGOTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -60,7 +60,7 @@ Partial Class formMenu
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.USERToolStripMenuItem, Me.DATABARANGToolStripMenuItem, Me.DATATRANSAKSIToolStripMenuItem, Me.DATAKEUANGANToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.USERToolStripMenuItem, Me.DATAToolStripMenuItem, Me.DATATRANSAKSIToolStripMenuItem, Me.DATAKEUANGANToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 1)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(565, 28)
@@ -98,12 +98,12 @@ Partial Class formMenu
         Me.LOGOUTToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.LOGOUTToolStripMenuItem.Text = "LOGOUT"
         '
-        'DATABARANGToolStripMenuItem
+        'DATAToolStripMenuItem
         '
-        Me.DATABARANGToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DATAANGGOTAToolStripMenuItem, Me.DATASUPPLIERToolStripMenuItem, Me.DATASIMPANANANGGOTAToolStripMenuItem, Me.DATAHUTANGToolStripMenuItem})
-        Me.DATABARANGToolStripMenuItem.Name = "DATABARANGToolStripMenuItem"
-        Me.DATABARANGToolStripMenuItem.Size = New System.Drawing.Size(60, 24)
-        Me.DATABARANGToolStripMenuItem.Text = "DATA"
+        Me.DATAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DATAANGGOTAToolStripMenuItem, Me.DATASUPPLIERToolStripMenuItem, Me.DATASIMPANANANGGOTAToolStripMenuItem, Me.DATAHUTANGToolStripMenuItem})
+        Me.DATAToolStripMenuItem.Name = "DATAToolStripMenuItem"
+        Me.DATAToolStripMenuItem.Size = New System.Drawing.Size(60, 24)
+        Me.DATAToolStripMenuItem.Text = "DATA"
         '
         'DATAANGGOTAToolStripMenuItem
         '
@@ -139,19 +139,19 @@ Partial Class formMenu
         'BARANGMASUKToolStripMenuItem
         '
         Me.BARANGMASUKToolStripMenuItem.Name = "BARANGMASUKToolStripMenuItem"
-        Me.BARANGMASUKToolStripMenuItem.Size = New System.Drawing.Size(208, 26)
+        Me.BARANGMASUKToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.BARANGMASUKToolStripMenuItem.Text = "BARANG MASUK"
         '
         'BARANGKELUARToolStripMenuItem
         '
         Me.BARANGKELUARToolStripMenuItem.Name = "BARANGKELUARToolStripMenuItem"
-        Me.BARANGKELUARToolStripMenuItem.Size = New System.Drawing.Size(208, 26)
+        Me.BARANGKELUARToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.BARANGKELUARToolStripMenuItem.Text = "BARANG KELUAR"
         '
         'PENJUALANToolStripMenuItem
         '
         Me.PENJUALANToolStripMenuItem.Name = "PENJUALANToolStripMenuItem"
-        Me.PENJUALANToolStripMenuItem.Size = New System.Drawing.Size(208, 26)
+        Me.PENJUALANToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PENJUALANToolStripMenuItem.Text = "PENJUALAN"
         '
         'DATAKEUANGANToolStripMenuItem
@@ -164,7 +164,7 @@ Partial Class formMenu
         'REKAPKASToolStripMenuItem
         '
         Me.REKAPKASToolStripMenuItem.Name = "REKAPKASToolStripMenuItem"
-        Me.REKAPKASToolStripMenuItem.Size = New System.Drawing.Size(167, 26)
+        Me.REKAPKASToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.REKAPKASToolStripMenuItem.Text = "REKAP KAS"
         '
         'StatusStrip1
@@ -283,7 +283,7 @@ Partial Class formMenu
     Friend WithEvents LOGINToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UBAHPASSWORDToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LOGOUTToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DATABARANGToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DATAToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DATATRANSAKSIToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BARANGMASUKToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BARANGKELUARToolStripMenuItem As ToolStripMenuItem

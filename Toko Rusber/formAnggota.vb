@@ -17,7 +17,7 @@ Public Class formAnggota
         txtbxHubAhli.Enabled = False
         txtbxAlamat.Enabled = False
         cmbxKelamin.Enabled = False
-        lblTanggal.Text = Date.Now.ToString("dd/MM/yyyy")
+        lblTanggal.Text = Date.Now.ToString("yyyy-MM-dd")
         lblNomor.Text = "KRB00000"
         lblNomor.Visible = True
         lblTanggal.Visible = True
@@ -65,6 +65,7 @@ Public Class formAnggota
             btnSimpan.Enabled = True
             cmbxKelamin.Enabled = True
             btnSimpan.Text = "TAMBAH"
+            txtbxTelp.Enabled = True
         Else
             Call awal()
         End If

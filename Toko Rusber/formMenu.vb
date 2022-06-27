@@ -7,11 +7,18 @@
         LOGINToolStripMenuItem.Visible = True
         LOGOUTToolStripMenuItem.Visible = False
         UBAHPASSWORDToolStripMenuItem.Visible = False
-        DATAANGGOTAToolStripMenuItem.Visible = False
-        DATABARANGToolStripMenuItem.Visible = False
-        DATATRANSAKSIToolStripMenuItem.Visible = False
+        BARANGKELUARToolStripMenuItem.Visible = False
+        BARANGMASUKToolStripMenuItem.Visible = False
+        DATAToolStripMenuItem.Visible = False
+        PENJUALANToolStripMenuItem.Visible = False
         DATAKEUANGANToolStripMenuItem.Visible = False
-
+        REKAPKASToolStripMenuItem.Visible = False
+        DATATRANSAKSIToolStripMenuItem.Visible = False
+        DATAANGGOTAToolStripMenuItem.Visible = False
+        DATASUPPLIERToolStripMenuItem.Visible = False
+        DATASIMPANANANGGOTAToolStripMenuItem.Visible = False
+        DATAHUTANGToolStripMenuItem.Visible = False
+        KELOLAAKUNToolStripMenuItem.Visible = False
     End Sub
     Private Sub formMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call awal()
