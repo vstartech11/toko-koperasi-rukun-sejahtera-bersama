@@ -9,6 +9,7 @@ Public Class formLogin
             formMenu.DATAKEUANGANToolStripMenuItem.Visible = True
             formMenu.DATATRANSAKSIToolStripMenuItem.Visible = True
             formMenu.DATAANGGOTAToolStripMenuItem.Visible = True
+            formMenu.UBAHPASSWORDToolStripMenuItem.Visible = True
         ElseIf formMenu.tlsStatus.Text.Equals("CASHIER") Then
             formMenu.DATATRANSAKSIToolStripMenuItem.Visible = True
             formMenu.BARANGKELUARToolStripMenuItem.Visible = False
@@ -22,7 +23,6 @@ Public Class formLogin
 
         formMenu.LOGINToolStripMenuItem.Visible = False
         formMenu.LOGOUTToolStripMenuItem.Visible = True
-        formMenu.UBAHPASSWORDToolStripMenuItem.Visible = True
 
     End Sub
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -73,5 +73,9 @@ Public Class formLogin
                 End If
             End If
         End If
+    End Sub
+
+    Private Sub formLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtbxUsername.Focus()
     End Sub
 End Class

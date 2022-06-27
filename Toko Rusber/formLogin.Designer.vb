@@ -27,9 +27,9 @@ Partial Class formLogin
         Me.txtbxPassword = New System.Windows.Forms.MaskedTextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnHome = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -78,16 +78,6 @@ Partial Class formLogin
         Me.Panel1.Size = New System.Drawing.Size(636, 258)
         Me.Panel1.TabIndex = 4
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(171, 11)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(311, 39)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "HALAMAN LOGIN"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -107,6 +97,16 @@ Partial Class formLogin
         Me.Label1.Size = New System.Drawing.Size(111, 22)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "USERNAME"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(171, 11)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(300, 38)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "HALAMAN LOGIN"
         '
         'btnHome
         '

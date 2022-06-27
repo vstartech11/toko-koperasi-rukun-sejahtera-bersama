@@ -8,7 +8,7 @@ Module moduleKoneksi
     Public Conn As SqlConnection
 
     Sub koneksi()
-        Str = "Data Source=localhost\SQLEXPRESS;Initial Catalog=dbKoperasi;Persist Security Info=True;User ID=bintang;Password=441840"
+        Str = My.Settings.koneksiDB.ToString
         Conn = New SqlConnection(Str)
         If Conn.State = ConnectionState.Closed Then
             Conn.Open()

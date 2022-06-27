@@ -34,4 +34,13 @@
     Private Sub UBAHPASSWORDToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UBAHPASSWORDToolStripMenuItem.Click
         formUbahPass.ShowDialog()
     End Sub
+
+    Private Sub DATASUPPLIERToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DATASUPPLIERToolStripMenuItem.Click
+        formSupplier.ShowDialog()
+    End Sub
+
+    Private Sub DATAANGGOTAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DATAANGGOTAToolStripMenuItem.Click
+        formAnggota.ShowDialog()
+    End Sub
+
 End Class

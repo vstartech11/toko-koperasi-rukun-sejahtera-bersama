@@ -46,6 +46,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -72,6 +75,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formAnggota.Designer.vb">
+      <DependentUpon>formAnggota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formAnggota.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formLogin.Designer.vb">
       <DependentUpon>formLogin.vb</DependentUpon>
     </Compile>
@@ -83,6 +92,12 @@
     </Compile>
     <Compile Include="formMenu.Designer.vb">
       <DependentUpon>formMenu.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSupplier.Designer.vb">
+      <DependentUpon>formSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formSupplier.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formUbahPass.Designer.vb">
@@ -109,11 +124,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="formAnggota.resx">
+      <DependentUpon>formAnggota.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSupplier.resx">
+      <DependentUpon>formSupplier.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formUbahPass.resx">
       <DependentUpon>formUbahPass.vb</DependentUpon>
@@ -126,6 +147,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

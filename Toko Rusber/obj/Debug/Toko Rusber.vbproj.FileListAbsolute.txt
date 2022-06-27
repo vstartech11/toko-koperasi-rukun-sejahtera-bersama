@@ -12,3 +12,19 @@ C:\Users\vstar\OneDrive\Documents\Kerjaan VB\toko-koperasi-rukun-sejahtera-bersa
 C:\Users\vstar\OneDrive\Documents\Kerjaan VB\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko Rusber.xml
 C:\Users\vstar\OneDrive\Documents\Kerjaan VB\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko Rusber.pdb
 C:\Users\vstar\OneDrive\Documents\Kerjaan VB\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formUbahPass.resources
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\bin\Debug\Toko Rusber.exe.config
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\bin\Debug\Toko Rusber.exe
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\bin\Debug\Toko Rusber.pdb
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\bin\Debug\Toko Rusber.xml
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko Rusber.vbproj.AssemblyReference.cache
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formLogin.resources
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formMenu.resources
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formUbahPass.resources
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.Resources.resources
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko Rusber.vbproj.GenerateResource.cache
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko Rusber.vbproj.CoreCompileInputs.cache
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko Rusber.exe
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko Rusber.xml
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko Rusber.pdb
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formSupplier.resources
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formAnggota.resources
