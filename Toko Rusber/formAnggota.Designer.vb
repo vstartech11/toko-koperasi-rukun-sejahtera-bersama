@@ -36,18 +36,19 @@ Partial Class formAnggota
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.lblNomor = New System.Windows.Forms.Label()
         Me.lblTanggal = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.cmbxKelamin = New System.Windows.Forms.ComboBox()
+        Me.txtbxNama = New System.Windows.Forms.TextBox()
+        Me.txtbxNik = New System.Windows.Forms.TextBox()
+        Me.txtbxAlamat = New System.Windows.Forms.TextBox()
+        Me.txtbxPekerjaan = New System.Windows.Forms.TextBox()
+        Me.txtbxNamaAhli = New System.Windows.Forms.TextBox()
+        Me.txtbxHubAhli = New System.Windows.Forms.TextBox()
         Me.btnSimpan = New System.Windows.Forms.Button()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtbxTelp = New System.Windows.Forms.TextBox()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -150,7 +151,7 @@ Partial Class formAnggota
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(211, 502)
+        Me.Label5.Location = New System.Drawing.Point(211, 490)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(57, 16)
         Me.Label5.TabIndex = 3
@@ -159,7 +160,7 @@ Partial Class formAnggota
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(211, 534)
+        Me.Label6.Location = New System.Drawing.Point(211, 526)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(49, 16)
         Me.Label6.TabIndex = 3
@@ -168,7 +169,7 @@ Partial Class formAnggota
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(211, 598)
+        Me.Label7.Location = New System.Drawing.Point(211, 579)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(90, 16)
         Me.Label7.TabIndex = 3
@@ -177,7 +178,7 @@ Partial Class formAnggota
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(211, 628)
+        Me.Label8.Location = New System.Drawing.Point(211, 612)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(69, 16)
         Me.Label8.TabIndex = 3
@@ -186,25 +187,16 @@ Partial Class formAnggota
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(211, 668)
+        Me.Label9.Location = New System.Drawing.Point(211, 682)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(107, 16)
         Me.Label9.TabIndex = 3
         Me.Label9.Text = "Nama Ahli Waris"
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(211, 652)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(10, 16)
-        Me.Label10.TabIndex = 3
-        Me.Label10.Text = " "
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(211, 697)
+        Me.Label11.Location = New System.Drawing.Point(211, 727)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(132, 16)
         Me.Label11.TabIndex = 3
@@ -229,82 +221,99 @@ Partial Class formAnggota
         Me.lblTanggal.TabIndex = 3
         Me.lblTanggal.Visible = False
         '
-        'ComboBox1
+        'cmbxKelamin
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
-        Me.ComboBox1.Location = New System.Drawing.Point(374, 598)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(136, 24)
-        Me.ComboBox1.TabIndex = 6
+        Me.cmbxKelamin.FormattingEnabled = True
+        Me.cmbxKelamin.Items.AddRange(New Object() {"Pilih", "Laki-Laki", "Perempuan"})
+        Me.cmbxKelamin.Location = New System.Drawing.Point(374, 579)
+        Me.cmbxKelamin.Name = "cmbxKelamin"
+        Me.cmbxKelamin.Size = New System.Drawing.Size(136, 24)
+        Me.cmbxKelamin.TabIndex = 6
         '
-        'TextBox1
+        'txtbxNama
         '
-        Me.TextBox1.Location = New System.Drawing.Point(374, 437)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(255, 22)
-        Me.TextBox1.TabIndex = 3
+        Me.txtbxNama.Location = New System.Drawing.Point(374, 437)
+        Me.txtbxNama.Name = "txtbxNama"
+        Me.txtbxNama.Size = New System.Drawing.Size(255, 22)
+        Me.txtbxNama.TabIndex = 3
         '
-        'TextBox2
+        'txtbxNik
         '
-        Me.TextBox2.Location = New System.Drawing.Point(374, 499)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(255, 22)
-        Me.TextBox2.TabIndex = 4
+        Me.txtbxNik.Location = New System.Drawing.Point(374, 487)
+        Me.txtbxNik.Name = "txtbxNik"
+        Me.txtbxNik.Size = New System.Drawing.Size(255, 22)
+        Me.txtbxNik.TabIndex = 4
         '
-        'TextBox3
+        'txtbxAlamat
         '
-        Me.TextBox3.Location = New System.Drawing.Point(374, 527)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(255, 54)
-        Me.TextBox3.TabIndex = 5
+        Me.txtbxAlamat.Location = New System.Drawing.Point(374, 519)
+        Me.txtbxAlamat.Multiline = True
+        Me.txtbxAlamat.Name = "txtbxAlamat"
+        Me.txtbxAlamat.Size = New System.Drawing.Size(255, 54)
+        Me.txtbxAlamat.TabIndex = 5
         '
-        'TextBox4
+        'txtbxPekerjaan
         '
-        Me.TextBox4.Location = New System.Drawing.Point(374, 625)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(255, 22)
-        Me.TextBox4.TabIndex = 7
+        Me.txtbxPekerjaan.Location = New System.Drawing.Point(374, 609)
+        Me.txtbxPekerjaan.Name = "txtbxPekerjaan"
+        Me.txtbxPekerjaan.Size = New System.Drawing.Size(255, 22)
+        Me.txtbxPekerjaan.TabIndex = 7
         '
-        'TextBox5
+        'txtbxNamaAhli
         '
-        Me.TextBox5.Location = New System.Drawing.Point(374, 662)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(255, 22)
-        Me.TextBox5.TabIndex = 8
+        Me.txtbxNamaAhli.Location = New System.Drawing.Point(374, 676)
+        Me.txtbxNamaAhli.Name = "txtbxNamaAhli"
+        Me.txtbxNamaAhli.Size = New System.Drawing.Size(255, 22)
+        Me.txtbxNamaAhli.TabIndex = 8
         '
-        'TextBox6
+        'txtbxHubAhli
         '
-        Me.TextBox6.Location = New System.Drawing.Point(374, 691)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(255, 22)
-        Me.TextBox6.TabIndex = 9
+        Me.txtbxHubAhli.Location = New System.Drawing.Point(374, 721)
+        Me.txtbxHubAhli.Name = "txtbxHubAhli"
+        Me.txtbxHubAhli.Size = New System.Drawing.Size(255, 22)
+        Me.txtbxHubAhli.TabIndex = 9
         '
         'btnSimpan
         '
-        Me.btnSimpan.Location = New System.Drawing.Point(768, 575)
+        Me.btnSimpan.Location = New System.Drawing.Point(817, 590)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(140, 93)
         Me.btnSimpan.TabIndex = 10
         Me.btnSimpan.Text = "SIMPAN"
         Me.btnSimpan.UseVisualStyleBackColor = True
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(211, 649)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(79, 16)
+        Me.Label12.TabIndex = 3
+        Me.Label12.Text = "Nomor Telp"
+        '
+        'txtbxTelp
+        '
+        Me.txtbxTelp.Location = New System.Drawing.Point(374, 646)
+        Me.txtbxTelp.Name = "txtbxTelp"
+        Me.txtbxTelp.Size = New System.Drawing.Size(255, 22)
+        Me.txtbxTelp.TabIndex = 7
+        '
         'formAnggota
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1035, 733)
+        Me.ClientSize = New System.Drawing.Size(1035, 755)
         Me.Controls.Add(Me.btnSimpan)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.txtbxHubAhli)
+        Me.Controls.Add(Me.txtbxNamaAhli)
+        Me.Controls.Add(Me.txtbxTelp)
+        Me.Controls.Add(Me.txtbxPekerjaan)
+        Me.Controls.Add(Me.txtbxAlamat)
+        Me.Controls.Add(Me.txtbxNik)
+        Me.Controls.Add(Me.txtbxNama)
+        Me.Controls.Add(Me.cmbxKelamin)
         Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -342,16 +351,17 @@ Partial Class formAnggota
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents lblNomor As Label
     Friend WithEvents lblTanggal As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents cmbxKelamin As ComboBox
+    Friend WithEvents txtbxNama As TextBox
+    Friend WithEvents txtbxNik As TextBox
+    Friend WithEvents txtbxAlamat As TextBox
+    Friend WithEvents txtbxPekerjaan As TextBox
+    Friend WithEvents txtbxNamaAhli As TextBox
+    Friend WithEvents txtbxHubAhli As TextBox
     Friend WithEvents btnSimpan As Button
+    Friend WithEvents Label12 As Label
+    Friend WithEvents txtbxTelp As TextBox
 End Class

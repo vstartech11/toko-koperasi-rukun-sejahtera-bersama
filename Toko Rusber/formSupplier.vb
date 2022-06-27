@@ -31,7 +31,7 @@ Public Class formSupplier
 
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         If rdoTambah.Checked = True Then
-            If (txtbxNama.Text = vbNullString) Or (txtbxAlamat.Text = vbNullString) Or (txtbxTelp.Text = vbNullString) Then
+            If (txtbxNama.Text = vbNullString) Or (txtbxAlamat.Text = vbNullString) Or (txtbxTelp.Text = vbNullString) Or lblId.Text = "0" Then
                 MsgBox("Semua kolom wajib diisi !", MsgBoxStyle.Information)
             Else
                 Call koneksi()
@@ -42,7 +42,7 @@ Public Class formSupplier
                 Call awal
             End If
         ElseIf rdoUbah.Checked = True Then
-            If (txtbxNama.Text = vbNullString) Or (txtbxAlamat.Text = vbNullString) Or (txtbxTelp.Text = vbNullString) Then
+            If (txtbxNama.Text = vbNullString) Or (txtbxAlamat.Text = vbNullString) Or (txtbxTelp.Text = vbNullString) Or lblId.Text = "0" Then
                 MsgBox("Silahkan pilih data dari daftar !", MsgBoxStyle.Information)
             Else
                 Call koneksi()
@@ -53,8 +53,8 @@ Public Class formSupplier
                 Call awal()
             End If
         ElseIf rdoHapus.Checked = True Then
-            If (txtbxNama.Text = vbNullString) Or (txtbxAlamat.Text = vbNullString) Or (txtbxTelp.Text = vbNullString) Then
-                MsgBox("Silahkan pilih data dari daftar !", MsgBoxStyle.Information)
+            If lblId.Text = "0" Then
+                MsgBox("Data tidak valid ! Silahkan pilih data dari daftar !", MsgBoxStyle.Information)
             Else
                 Call koneksi()
                 Cmd = New SqlCommand("delete from tblSupplier where id='" & lblId.Text & "'", Conn)
