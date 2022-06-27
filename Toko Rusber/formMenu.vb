@@ -43,4 +43,7 @@
         formAnggota.ShowDialog()
     End Sub
 
+    Private Sub KELOLAAKUNToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KELOLAAKUNToolStripMenuItem.Click
+        formAkun.ShowDialog()
+    End Sub
 End Class
