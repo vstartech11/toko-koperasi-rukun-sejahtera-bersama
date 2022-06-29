@@ -63,7 +63,7 @@ Public Class formAnggota
                     lblNomor.Text = "KRB" & Rd!noAnggota
             End Select
         End If
-
+        Conn.Close()
     End Sub
     Private Sub rdoTambah_CheckedChanged(sender As Object, e As EventArgs) Handles rdoTambah.CheckedChanged
         If rdoTambah.Checked = True Then

@@ -31,7 +31,7 @@ Public Class formSupplier
 
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         If rdoTambah.Checked = True Then
-            If (txtbxNama.Text = vbNullString) Or (txtbxAlamat.Text = vbNullString) Or (txtbxTelp.Text = vbNullString) Or lblId.Text = "0" Then
+            If (txtbxNama.Text = vbNullString) Or (txtbxAlamat.Text = vbNullString) Or (txtbxTelp.Text = vbNullString) Then
                 MsgBox("Semua kolom wajib diisi !", MsgBoxStyle.Information)
             Else
                 Call koneksi()

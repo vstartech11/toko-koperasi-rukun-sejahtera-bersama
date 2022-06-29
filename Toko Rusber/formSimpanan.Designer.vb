@@ -28,7 +28,7 @@ Partial Class formSimpanan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1028, 592)
+        Me.ClientSize = New System.Drawing.Size(1206, 543)
         Me.Name = "formSimpanan"
         Me.Text = "formSimpanan"
         Me.ResumeLayout(False)
