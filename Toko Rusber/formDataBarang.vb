@@ -14,6 +14,15 @@ Public Class formDataBarang
         cmbxKategori.Enabled = False
         btnSimpan.Enabled = False
         btnSimpan.Text = vbNullString
+        txtbxBarcode.Text = vbNullString
+        txtbxJualAnggota.Text = vbNullString
+        txtbxJualBon.Text = vbNullString
+        txtbxJualUmum.Text = vbNullString
+        txtbxModal.Text = vbNullString
+        txtbxNama.Text = vbNullString
+        txtbxStok.Text = vbNullString
+        cmbxKategori.Text = vbNullString
+        btnSimpan.Text = vbNullString
         Call getData()
         Call getCombo()
     End Sub
@@ -33,7 +42,7 @@ Public Class formDataBarang
         Ds = New DataSet
         Ds.Clear()
         Da.Fill(Ds, "tblBarang")
-        DataGridView1.DataSource = (Ds.Tables("tblBarang"))
+        dgvBarang.DataSource = (Ds.Tables("tblBarang"))
         Conn.Close()
     End Sub
     Private Sub rdoTambah_CheckedChanged(sender As Object, e As EventArgs) Handles rdoTambah.CheckedChanged
@@ -49,36 +58,12 @@ Public Class formDataBarang
             btnSimpan.Enabled = True
             btnSimpan.Text = "TAMBAH"
         Else
-            Call awal
+            Call awal()
         End If
 
     End Sub
 
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
-
-    End Sub
-
-    Private Sub formDataBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call awal()
-    End Sub
-
-    Private Sub rdoUbah_CheckedChanged(sender As Object, e As EventArgs) Handles rdoUbah.CheckedChanged
-        If rdoUbah.Checked = True Then
-            MsgBox("Silahkan pilih data dari daftar !", MsgBoxStyle.Information)
-        Else
-            Call awal()
-        End If
-    End Sub
-
-    Private Sub rdoHapus_CheckedChanged(sender As Object, e As EventArgs) Handles rdoHapus.CheckedChanged
-        If rdoHapus.Checked = True Then
-            MsgBox("Silahkan pilih data dari daftar !", MsgBoxStyle.Information)
-        Else
-            Call awal()
-        End If
-    End Sub
-
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         If rdoHapus.Checked = True Then
             If txtbxBarcode.Text = vbNullString Then
                 MsgBox("Tidak Valid, silahkan pilih data !", MsgBoxStyle.Information)
@@ -117,12 +102,63 @@ Public Class formDataBarang
                 MsgBox("Semua kolom wajib di isi !!!")
             Else
                 Call koneksi()
-                Cmd = New SqlCommand("update tblBarang set namaBarang='" & txtbxNama.Text & "',kategori='" & cmbxKategori.Text & "','" & txtbxStok.Text & "'", Conn)
+                Cmd = New SqlCommand("update tblBarang set namaBarang='" & txtbxNama.Text & "',kategori='" & cmbxKategori.Text & "',stockBarang='" & txtbxStok.Text & "',hargaModal='" & txtbxModal.Text & "',hJualUmum='" & txtbxJualUmum.Text & "',hJualAnggota='" & txtbxJualAnggota.Text & "',hBonAnggota='" & txtbxJualBon.Text & "' where barcode='" & txtbxBarcode.Text & "'", Conn)
                 Cmd.ExecuteNonQuery()
                 MsgBox("Sukses mengubah data " + txtbxNama.Text)
                 Conn.Close()
                 Call awal()
             End If
         End If
+    End Sub
+
+    Private Sub formDataBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call awal()
+    End Sub
+
+    Private Sub rdoUbah_CheckedChanged(sender As Object, e As EventArgs) Handles rdoUbah.CheckedChanged
+        If rdoUbah.Checked = True Then
+            MsgBox("Silahkan pilih data dari daftar !", MsgBoxStyle.Information)
+        Else
+            Call awal()
+        End If
+    End Sub
+
+    Private Sub rdoHapus_CheckedChanged(sender As Object, e As EventArgs) Handles rdoHapus.CheckedChanged
+        If rdoHapus.Checked = True Then
+            MsgBox("Silahkan pilih data dari daftar !", MsgBoxStyle.Information)
+        Else
+            Call awal()
+        End If
+    End Sub
+
+    Private Sub dgvBarang_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBarang.CellClick
+        If rdoHapus.Checked = True Or rdoUbah.Checked = True Then
+            txtbxBarcode.Text = dgvBarang.Rows(e.RowIndex).Cells(0).Value.ToString
+            txtbxNama.Text = dgvBarang.Rows(e.RowIndex).Cells(1).Value.ToString
+            cmbxKategori.Text = dgvBarang.Rows(e.RowIndex).Cells(2).Value.ToString
+            txtbxStok.Text = dgvBarang.Rows(e.RowIndex).Cells(3).Value.ToString
+            txtbxModal.Text = dgvBarang.Rows(e.RowIndex).Cells(4).Value.ToString
+            txtbxJualUmum.Text = dgvBarang.Rows(e.RowIndex).Cells(5).Value.ToString
+            txtbxJualAnggota.Text = dgvBarang.Rows(e.RowIndex).Cells(6).Value.ToString
+            txtbxJualBon.Text = dgvBarang.Rows(e.RowIndex).Cells(7).Value.ToString
+            btnSimpan.Enabled = True
+            If rdoHapus.Checked = True Then
+                btnSimpan.Text = "HAPUS"
+            ElseIf rdoUbah.Checked = True Then
+                btnSimpan.Text = "SIMPAN"
+                txtbxNama.Enabled = True
+                txtbxStok.Enabled = True
+                txtbxModal.Enabled = True
+                txtbxJualUmum.Enabled = True
+                txtbxJualBon.Enabled = True
+                txtbxJualAnggota.Enabled = True
+                txtbxBarcode.Enabled = False
+                cmbxKategori.Enabled = True
+            End If
+        Else
+            MsgBox("Silahkan pilih opsi tambah/ubah/hapus !")
+            Call awal()
+        End If
+
     End Sub
 End Class

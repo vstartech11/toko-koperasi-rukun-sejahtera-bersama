@@ -57,4 +57,16 @@
     Private Sub DATABARANGToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DATABARANGToolStripMenuItem.Click
         formDataBarang.ShowDialog()
     End Sub
+
+    Private Sub DATASIMPANANANGGOTAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DATASIMPANANANGGOTAToolStripMenuItem.Click
+        formSimpanan.ShowDialog()
+    End Sub
+
+    Private Sub BARANGMASUKToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BARANGMASUKToolStripMenuItem.Click
+        formBMasuk.ShowDialog()
+    End Sub
+
+    Private Sub BARANGKELUARToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BARANGKELUARToolStripMenuItem.Click
+        formDPenjualan.ShowDialog()
+    End Sub
 End Class

@@ -22,7 +22,7 @@ Partial Class formDataBarang
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvBarang = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.rdoHapus = New System.Windows.Forms.RadioButton()
         Me.rdoUbah = New System.Windows.Forms.RadioButton()
@@ -44,22 +44,22 @@ Partial Class formDataBarang
         Me.txtbxJualBon = New System.Windows.Forms.TextBox()
         Me.cmbxKategori = New System.Windows.Forms.ComboBox()
         Me.btnSimpan = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvBarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'dgvBarang
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(86, 56)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1031, 210)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgvBarang.AllowUserToAddRows = False
+        Me.dgvBarang.AllowUserToDeleteRows = False
+        Me.dgvBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvBarang.Location = New System.Drawing.Point(86, 56)
+        Me.dgvBarang.Name = "dgvBarang"
+        Me.dgvBarang.ReadOnly = True
+        Me.dgvBarang.RowHeadersWidth = 51
+        Me.dgvBarang.RowTemplate.Height = 24
+        Me.dgvBarang.Size = New System.Drawing.Size(1031, 210)
+        Me.dgvBarang.TabIndex = 0
         '
         'GroupBox1
         '
@@ -267,10 +267,10 @@ Partial Class formDataBarang
         Me.Controls.Add(Me.txtbxNama)
         Me.Controls.Add(Me.txtbxBarcode)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvBarang)
         Me.Name = "formDataBarang"
         Me.Text = "formDataBarang"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvBarang, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -278,7 +278,7 @@ Partial Class formDataBarang
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvBarang As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents rdoHapus As RadioButton
     Friend WithEvents rdoUbah As RadioButton

@@ -109,7 +109,7 @@ Public Class formAkun
                 MsgBox("Silahkan isi semua kolom !!!", MsgBoxStyle.Information)
             Else
                 Call koneksi()
-                Cmd = New SqlCommand("insert into tblUser values('" & txtbxUsername.Text & "','" & txtbxNama.Text & "','" & txtbxPass.Text & "','" & cmbxStatus.Text & "')", Conn)
+                Cmd = New SqlCommand("insert into tblUser values('" & txtbxUsername.Text & "','" & txtbxNama.Text & "','" & txtbxPass.Text & "','" & cmbxStatus.Text & "','" & DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") & "')", Conn)
                 Cmd.ExecuteNonQuery()
                 MsgBox("Sukses menambahkan " + txtbxNama.Text, MsgBoxStyle.Information)
                 Conn.Close()
