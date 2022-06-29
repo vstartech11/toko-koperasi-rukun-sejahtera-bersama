@@ -53,4 +53,8 @@
     Private Sub KELOLAAKUNToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KELOLAAKUNToolStripMenuItem.Click
         formAkun.ShowDialog()
     End Sub
+
+    Private Sub DATABARANGToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DATABARANGToolStripMenuItem.Click
+        formDataBarang.ShowDialog()
+    End Sub
 End Class

@@ -29,3 +29,4 @@ C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\To
 C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formSupplier.resources
 C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formAnggota.resources
 C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formAkun.resources
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formDataBarang.resources

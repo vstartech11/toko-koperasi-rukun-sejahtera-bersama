@@ -49,6 +49,8 @@ Partial Class formAnggota
         Me.btnSimpan = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtbxTelp = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.cmbxStatus = New System.Windows.Forms.ComboBox()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -298,6 +300,24 @@ Partial Class formAnggota
         Me.txtbxTelp.Size = New System.Drawing.Size(255, 22)
         Me.txtbxTelp.TabIndex = 7
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(654, 437)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(44, 16)
+        Me.Label10.TabIndex = 3
+        Me.Label10.Text = "Status"
+        '
+        'cmbxStatus
+        '
+        Me.cmbxStatus.FormattingEnabled = True
+        Me.cmbxStatus.Items.AddRange(New Object() {"Pilih", "Laki-Laki", "Perempuan"})
+        Me.cmbxStatus.Location = New System.Drawing.Point(719, 432)
+        Me.cmbxStatus.Name = "cmbxStatus"
+        Me.cmbxStatus.Size = New System.Drawing.Size(136, 24)
+        Me.cmbxStatus.TabIndex = 6
+        '
         'formAnggota
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -311,10 +331,12 @@ Partial Class formAnggota
         Me.Controls.Add(Me.txtbxAlamat)
         Me.Controls.Add(Me.txtbxNik)
         Me.Controls.Add(Me.txtbxNama)
+        Me.Controls.Add(Me.cmbxStatus)
         Me.Controls.Add(Me.cmbxKelamin)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -364,4 +386,6 @@ Partial Class formAnggota
     Friend WithEvents btnSimpan As Button
     Friend WithEvents Label12 As Label
     Friend WithEvents txtbxTelp As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents cmbxStatus As ComboBox
 End Class

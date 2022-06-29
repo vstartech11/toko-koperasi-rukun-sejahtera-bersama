@@ -50,6 +50,7 @@ Partial Class formMenu
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnHome = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.DATABARANGToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -100,7 +101,7 @@ Partial Class formMenu
         '
         'DATAToolStripMenuItem
         '
-        Me.DATAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DATAANGGOTAToolStripMenuItem, Me.DATASUPPLIERToolStripMenuItem, Me.DATASIMPANANANGGOTAToolStripMenuItem, Me.DATAHUTANGToolStripMenuItem})
+        Me.DATAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DATAANGGOTAToolStripMenuItem, Me.DATASUPPLIERToolStripMenuItem, Me.DATASIMPANANANGGOTAToolStripMenuItem, Me.DATAHUTANGToolStripMenuItem, Me.DATABARANGToolStripMenuItem})
         Me.DATAToolStripMenuItem.Name = "DATAToolStripMenuItem"
         Me.DATAToolStripMenuItem.Size = New System.Drawing.Size(60, 24)
         Me.DATAToolStripMenuItem.Text = "DATA"
@@ -248,6 +249,12 @@ Partial Class formMenu
         Me.Label1.Text = "KOPERASI RUKUN SEJAHTERA BERSAMA"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'DATABARANGToolStripMenuItem
+        '
+        Me.DATABARANGToolStripMenuItem.Name = "DATABARANGToolStripMenuItem"
+        Me.DATABARANGToolStripMenuItem.Size = New System.Drawing.Size(279, 26)
+        Me.DATABARANGToolStripMenuItem.Text = "DATA BARANG"
+        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -305,4 +312,5 @@ Partial Class formMenu
     Friend WithEvents DATAHUTANGToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents KELOLAAKUNToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DATAANGGOTAToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DATABARANGToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -24,7 +24,19 @@ Public Class formAnggota
         rdoHapus.Checked = False
         rdoTambah.Checked = False
         rdoUbah.Checked = False
-        getData()
+        cmbxStatus.Enabled = False
+        Call getCombo()
+        Call getData()
+    End Sub
+    Sub getCombo()
+        cmbxStatus.Items.Clear()
+        Call koneksi()
+        Cmd = New SqlCommand("select distinct status from tblAnggota", Conn)
+        Rd = Cmd.ExecuteReader
+        Do While Rd.Read
+            cmbxStatus.Items.Add(Rd.Item(0).ToString)
+        Loop
+        Conn.Close()
     End Sub
     Sub getData()
         Call koneksi()
@@ -101,7 +113,7 @@ Public Class formAnggota
                 MsgBox("Semua kolom wajib diisi !", MsgBoxStyle.Information)
             Else
                 Call koneksi()
-                Cmd = New SqlCommand("insert into tblAnggota values('" & lblNomor.Text & "','" & txtbxNama.Text & "','" & lblTanggal.Text & "','" & txtbxNik.Text & "','" & txtbxAlamat.Text & "','" & cmbxKelamin.Text & "','" & txtbxPekerjaan.Text & "','" & txtbxTelp.Text & "','" & txtbxNamaAhli.Text & "','" & txtbxHubAhli.Text & "')", Conn)
+                Cmd = New SqlCommand("insert into tblAnggota values('" & lblNomor.Text & "','" & txtbxNama.Text & "','" & lblTanggal.Text & "','" & txtbxNik.Text & "','" & txtbxAlamat.Text & "','" & cmbxKelamin.Text & "','" & txtbxPekerjaan.Text & "','" & txtbxTelp.Text & "','" & txtbxNamaAhli.Text & "','" & txtbxHubAhli.Text & "','" & cmbxStatus.Text & "')", Conn)
                 Cmd.ExecuteNonQuery()
                 MsgBox("Sukses memasukkan " + txtbxNama.Text, MsgBoxStyle.Information)
                 Conn.Close()
@@ -111,11 +123,13 @@ Public Class formAnggota
             If lblNomor.Text = "KRB00000" Then
                 MsgBox("Data tidak valid ! Silahkan pilih dari daftar", MsgBoxStyle.Information)
             Else
-                Call koneksi()
-                Cmd = New SqlCommand("delete from tblAnggota where noAnggota='" & lblNomor.Text & "'", Conn)
-                Cmd.ExecuteNonQuery()
-                MsgBox("Sukses menghapus " + txtbxNama.Text, MsgBoxStyle.Information)
-                Conn.Close()
+                If (MsgBox("Yakin menghapus " + txtbxNama.Text + " ?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes) Then
+                    Call koneksi()
+                    Cmd = New SqlCommand("delete from tblAnggota where noAnggota='" & lblNomor.Text & "'", Conn)
+                    Cmd.ExecuteNonQuery()
+                    MsgBox("Sukses menghapus " + txtbxNama.Text, MsgBoxStyle.Information)
+                    Conn.Close()
+                End If
                 Call awal()
             End If
         ElseIf rdoUbah.Checked = True Then
@@ -123,7 +137,7 @@ Public Class formAnggota
                 MsgBox("Semua kolom wajib diisi !", MsgBoxStyle.Information)
             Else
                 Call koneksi()
-                Cmd = New SqlCommand("update tblAnggota set nama='" & txtbxNama.Text & "',nikKtp='" & txtbxNik.Text & "',alamat='" & txtbxAlamat.Text & "',jKelamin='" & cmbxKelamin.Text & "',pekerjaan='" & txtbxPekerjaan.Text & "',telp='" & txtbxTelp.Text & "',namaAhli='" & txtbxNamaAhli.Text & "',hubAhli='" & txtbxHubAhli.Text & "' where noAnggota='" & lblNomor.Text & "'", Conn)
+                Cmd = New SqlCommand("update tblAnggota set nama='" & txtbxNama.Text & "',nikKtp='" & txtbxNik.Text & "',alamat='" & txtbxAlamat.Text & "',jKelamin='" & cmbxKelamin.Text & "',pekerjaan='" & txtbxPekerjaan.Text & "',telp='" & txtbxTelp.Text & "',namaAhli='" & txtbxNamaAhli.Text & "',hubAhli='" & txtbxHubAhli.Text & "',status='" & cmbxStatus.Text & "' where noAnggota='" & lblNomor.Text & "'", Conn)
                 Cmd.ExecuteNonQuery()
                 MsgBox("Sukses mengubah " + txtbxNama.Text, MsgBoxStyle.Information)
                 Conn.Close()
@@ -144,6 +158,7 @@ Public Class formAnggota
             txtbxTelp.Text = dgv.Rows(e.RowIndex).Cells(7).Value.ToString
             txtbxNamaAhli.Text = dgv.Rows(e.RowIndex).Cells(8).Value.ToString
             txtbxHubAhli.Text = dgv.Rows(e.RowIndex).Cells(9).Value.ToString
+            cmbxStatus.Text = dgv.Rows(e.RowIndex).Cells(10).Value.ToString
 
             txtbxTelp.Enabled = True
             txtbxPekerjaan.Enabled = True
@@ -153,6 +168,8 @@ Public Class formAnggota
             txtbxHubAhli.Enabled = True
             txtbxAlamat.Enabled = True
             cmbxKelamin.Enabled = True
+            cmbxStatus.Enabled = True
         End If
     End Sub
+
 End Class
