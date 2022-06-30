@@ -1,4 +1,5 @@
-﻿Imports System
+﻿Imports System.Resources
+Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -9,7 +10,7 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Toko Rusber")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyDescription("Aplikasi Koperasi Rukun Sejahtera Bersama")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("Toko Rusber")>
 <Assembly: AssemblyCopyright("Copyright ©  2022")>
@@ -33,3 +34,4 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyVersion("1.0.0.0")>
 <Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: NeutralResourcesLanguage("id-ID")>
