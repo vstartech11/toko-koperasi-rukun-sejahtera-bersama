@@ -32,3 +32,4 @@ C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\To
 C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formDataBarang.resources
 C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formBMasuk.resources
 C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formSimpanan.resources
+C:\Users\vstar\Source\Repos\vstartech11\toko-koperasi-rukun-sejahtera-bersama\Toko Rusber\obj\Debug\Toko_Rusber.formDHutang.resources
