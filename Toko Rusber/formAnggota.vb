@@ -115,8 +115,12 @@ Public Class formAnggota
                 Call koneksi()
                 Cmd = New SqlCommand("insert into tblAnggota values('" & lblNomor.Text & "','" & txtbxNama.Text & "','" & lblTanggal.Text & "','" & txtbxNik.Text & "','" & txtbxAlamat.Text & "','" & cmbxKelamin.Text & "','" & txtbxPekerjaan.Text & "','" & txtbxTelp.Text & "','" & txtbxNamaAhli.Text & "','" & txtbxHubAhli.Text & "','" & cmbxStatus.Text & "')", Conn)
                 Cmd.ExecuteNonQuery()
-                MsgBox("Sukses memasukkan " + txtbxNama.Text, MsgBoxStyle.Information)
                 Conn.Close()
+                Call koneksi()
+                Cmd = New SqlCommand("insert into tblDSimpanan values('" & lblNomor.Text & "','0','0','0','0')", Conn)
+                Cmd.ExecuteNonQuery()
+                Conn.Close()
+                MsgBox("Sukses memasukkan " + txtbxNama.Text, MsgBoxStyle.Information)
                 Call awal()
             End If
         ElseIf rdoHapus.Checked = True Then

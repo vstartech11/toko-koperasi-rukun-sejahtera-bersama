@@ -103,6 +103,12 @@
     <Compile Include="formAnggota.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formDHutang.Designer.vb">
+      <DependentUpon>formDHutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formDHutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formDPenjualan.Designer.vb">
       <DependentUpon>formDPenjualan.vb</DependentUpon>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formDataBarang.resx">
       <DependentUpon>formDataBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDHutang.resx">
+      <DependentUpon>formDHutang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.vb</DependentUpon>

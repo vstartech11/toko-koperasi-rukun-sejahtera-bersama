@@ -78,25 +78,25 @@ Partial Class formMenu
         'KELOLAAKUNToolStripMenuItem
         '
         Me.KELOLAAKUNToolStripMenuItem.Name = "KELOLAAKUNToolStripMenuItem"
-        Me.KELOLAAKUNToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.KELOLAAKUNToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
         Me.KELOLAAKUNToolStripMenuItem.Text = "KELOLA AKUN"
         '
         'LOGINToolStripMenuItem
         '
         Me.LOGINToolStripMenuItem.Name = "LOGINToolStripMenuItem"
-        Me.LOGINToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.LOGINToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
         Me.LOGINToolStripMenuItem.Text = "LOGIN"
         '
         'UBAHPASSWORDToolStripMenuItem
         '
         Me.UBAHPASSWORDToolStripMenuItem.Name = "UBAHPASSWORDToolStripMenuItem"
-        Me.UBAHPASSWORDToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.UBAHPASSWORDToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
         Me.UBAHPASSWORDToolStripMenuItem.Text = "UBAH PASSWORD"
         '
         'LOGOUTToolStripMenuItem
         '
         Me.LOGOUTToolStripMenuItem.Name = "LOGOUTToolStripMenuItem"
-        Me.LOGOUTToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.LOGOUTToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
         Me.LOGOUTToolStripMenuItem.Text = "LOGOUT"
         '
         'DATAToolStripMenuItem

@@ -69,4 +69,8 @@
     Private Sub BARANGKELUARToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BARANGKELUARToolStripMenuItem.Click
         formDPenjualan.ShowDialog()
     End Sub
+
+    Private Sub DATAHUTANGToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DATAHUTANGToolStripMenuItem.Click
+        formDHutang.ShowDialog()
+    End Sub
 End Class

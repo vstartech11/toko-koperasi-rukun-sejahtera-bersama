@@ -1,5 +1,9 @@
 ﻿Imports System.Data.SqlClient
 Public Class formSimpanan
+    Dim tPokokWajib As Integer
+    Dim tSukarela As Integer
+    Dim lBon As Integer
+    Dim pBon As Integer
     Sub awal()
         Call getData()
         dtpTanggal.CustomFormat = "yyyy-MM-dd"
@@ -54,6 +58,38 @@ Public Class formSimpanan
             dtpTanggal.Enabled = True
             btnSimpan.Text = "SIMPAN"
             Call getID()
+        ElseIf btnSimpan.Text = "SIMPAN" Then
+            If txtbxJumlah.Text = vbNullString Then
+                MsgBox("Silahkan masukkan jumlah uang")
+                txtbxJumlah.Focus()
+            Else
+                Call koneksi()
+                Cmd = New SqlCommand("insert into tblSimpanan values('" & lblId.Text & "','" & dtpTanggal.Text & "','" & txtbxIDAnggota.Text & "','" & cmbxJenis.Text & "','" & txtbxJumlah.Text & "')", Conn)
+                Cmd.ExecuteNonQuery()
+                Conn.Close()
+                Call koneksi()
+                Cmd = New SqlCommand("select * from tblDSimpanan where noAnggota='" & txtbxIDAnggota.Text & "'", Conn)
+                Rd = Cmd.ExecuteReader
+                If Rd.Read Then
+                    tPokokWajib = Rd!tPokokWajib
+                    tSukarela = Rd!tSukarela
+                    lBon = Rd!lBon
+                    pBon = Rd!pBon
+                End If
+                Conn.Close()
+                Call koneksi()
+                If cmbxJenis.Text = "SUKARELA" Then
+                    Cmd = New SqlCommand("update tblDSimpanan set tSukarela='" & Val(txtbxJumlah.Text) + tSukarela & "' where noAnggota='" & txtbxIDAnggota.Text & "'", Conn)
+                    Cmd.ExecuteNonQuery()
+                ElseIf cmbxJenis.Text = "POKOK" Or cmbxJenis.Text = "WAJIB" Then
+                    Cmd = New SqlCommand("update tblDSimpanan set tPokokWajib='" & Val(txtbxJumlah.Text) + tPokokWajib & "',lBon='" & ((Val(txtbxJumlah.Text) + tPokokWajib) * 2) - pBon & "' where noAnggota='" & txtbxIDAnggota.Text & "'", Conn)
+                    Cmd.ExecuteNonQuery()
+                End If
+                Conn.Close()
+                MsgBox("SUKSES BROOOOO")
+                Call awal()
+            End If
+
         End If
     End Sub
 
@@ -65,6 +101,7 @@ Public Class formSimpanan
             Rd = Cmd.ExecuteReader
             If Rd.Read Then
                 Conn.Close()
+                txtbxIDAnggota.Enabled = False
                 Call koneksi()
                 Cmd = New SqlCommand("select jenisSimpanan,left(tanggal,7) from tblSimpanan where noAnggota='" & txtbxIDAnggota.Text & "'", Conn)
                 Rd = Cmd.ExecuteReader
@@ -76,6 +113,7 @@ Public Class formSimpanan
                                 Call awal()
                             Else
                                 txtbxJumlah.Focus()
+                                cmbxJenis.Enabled = False
                             End If
                         Loop
                     ElseIf cmbxJenis.Text = "WAJIB" Then
@@ -85,16 +123,19 @@ Public Class formSimpanan
                                 Call awal()
                             Else
                                 txtbxJumlah.Focus()
+                                cmbxJenis.Enabled = False
                             End If
                         Loop
+                    ElseIf cmbxJenis.Text = "SUKARELA" Then
+                        txtbxJumlah.Focus()
+                        cmbxJenis.Enabled = False
                     End If
                 End If
-
             Else
                 MsgBox("ID Anggota tidak terdaftar !!!")
                 txtbxIDAnggota.Text = vbNullString
                 txtbxIDAnggota.Focus()
-                cmbxJenis.ResetText()
+                cmbxJenis.Text = vbNullString
             End If
         End If
     End Sub
