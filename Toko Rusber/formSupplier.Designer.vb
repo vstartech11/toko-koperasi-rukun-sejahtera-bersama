@@ -24,6 +24,7 @@ Partial Class formSupplier
     Private Sub InitializeComponent()
         Me.dgvSupplier = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.rdoHapus = New System.Windows.Forms.RadioButton()
         Me.rdoUbah = New System.Windows.Forms.RadioButton()
         Me.rdoTambah = New System.Windows.Forms.RadioButton()
         Me.txtbxNama = New System.Windows.Forms.TextBox()
@@ -33,7 +34,6 @@ Partial Class formSupplier
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnSimpan = New System.Windows.Forms.Button()
-        Me.rdoHapus = New System.Windows.Forms.RadioButton()
         Me.lblId = New System.Windows.Forms.Label()
         CType(Me.dgvSupplier, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -63,6 +63,17 @@ Partial Class formSupplier
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Menu"
+        '
+        'rdoHapus
+        '
+        Me.rdoHapus.AutoSize = True
+        Me.rdoHapus.Location = New System.Drawing.Point(21, 88)
+        Me.rdoHapus.Name = "rdoHapus"
+        Me.rdoHapus.Size = New System.Drawing.Size(68, 20)
+        Me.rdoHapus.TabIndex = 2
+        Me.rdoHapus.TabStop = True
+        Me.rdoHapus.Text = "Hapus"
+        Me.rdoHapus.UseVisualStyleBackColor = True
         '
         'rdoUbah
         '
@@ -143,17 +154,6 @@ Partial Class formSupplier
         Me.btnSimpan.TabIndex = 6
         Me.btnSimpan.Text = "SIMPAN"
         Me.btnSimpan.UseVisualStyleBackColor = True
-        '
-        'rdoHapus
-        '
-        Me.rdoHapus.AutoSize = True
-        Me.rdoHapus.Location = New System.Drawing.Point(21, 88)
-        Me.rdoHapus.Name = "rdoHapus"
-        Me.rdoHapus.Size = New System.Drawing.Size(68, 20)
-        Me.rdoHapus.TabIndex = 2
-        Me.rdoHapus.TabStop = True
-        Me.rdoHapus.Text = "Hapus"
-        Me.rdoHapus.UseVisualStyleBackColor = True
         '
         'lblId
         '

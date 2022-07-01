@@ -140,6 +140,12 @@
       <DependentUpon>formMenu.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formPenarikan.Designer.vb">
+      <DependentUpon>formPenarikan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formPenarikan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formSimpanan.Designer.vb">
       <DependentUpon>formSimpanan.vb</DependentUpon>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPenarikan.resx">
+      <DependentUpon>formPenarikan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formSimpanan.resx">
       <DependentUpon>formSimpanan.vb</DependentUpon>

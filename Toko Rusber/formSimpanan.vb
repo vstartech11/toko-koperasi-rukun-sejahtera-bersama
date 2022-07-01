@@ -62,6 +62,12 @@ Public Class formSimpanan
             If txtbxJumlah.Text = vbNullString Then
                 MsgBox("Silahkan masukkan jumlah uang")
                 txtbxJumlah.Focus()
+            ElseIf txtbxIDAnggota.Text = vbNullString Or txtbxIDAnggota.Text = " " Then
+                MsgBox("Silahkan masukkan ID Anggota")
+                txtbxIDAnggota.Focus()
+            ElseIf cmbxJenis.Text = vbNullString Or cmbxJenis.Text = " " Then
+                MsgBox("Silahkan pilih jenis simpanan")
+                cmbxJenis.Focus()
             Else
                 Call koneksi()
                 Cmd = New SqlCommand("insert into tblSimpanan values('" & lblId.Text & "','" & dtpTanggal.Text & "','" & txtbxIDAnggota.Text & "','" & cmbxJenis.Text & "','" & txtbxJumlah.Text & "')", Conn)
@@ -119,7 +125,7 @@ Public Class formSimpanan
                     ElseIf cmbxJenis.Text = "WAJIB" Then
                         Do While Rd.Read
                             If Rd.Item(0).ToString = "WAJIB" And Rd.Item(1).ToString = Date.Now.ToString("yyyy-MM") Then
-                                MsgBox("Simpanan Wajib Telah Ada !")
+                                MsgBox("Simpanan Wajib Bulan Ini Sudah Dibayar !")
                                 Call awal()
                             Else
                                 txtbxJumlah.Focus()
@@ -138,5 +144,9 @@ Public Class formSimpanan
                 cmbxJenis.Text = vbNullString
             End If
         End If
+    End Sub
+
+    Private Sub cmbxJenis_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmbxJenis.KeyPress
+        e.Handled = True
     End Sub
 End Class

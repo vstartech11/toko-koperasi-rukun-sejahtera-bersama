@@ -120,6 +120,10 @@ Public Class formAnggota
                 Cmd = New SqlCommand("insert into tblDSimpanan values('" & lblNomor.Text & "','0','0','0','0')", Conn)
                 Cmd.ExecuteNonQuery()
                 Conn.Close()
+                Call koneksi()
+                Cmd = New SqlCommand("Insert into tblHutang values('" & lblNomor.Text & "','0','" & Date.Now.ToString("yyyy-MM-dd") & "')", Conn)
+                Cmd.ExecuteNonQuery()
+                Conn.Close()
                 MsgBox("Sukses memasukkan " + txtbxNama.Text, MsgBoxStyle.Information)
                 Call awal()
             End If
