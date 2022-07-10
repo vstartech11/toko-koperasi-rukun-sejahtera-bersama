@@ -116,4 +116,20 @@ Public Class formSupplier
             e.Handled = True
         End If
     End Sub
+
+    Private Sub txtbxCari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtbxCari.KeyPress
+        If e.KeyChar = Chr(13) Then
+            If txtbxCari.Text = vbNullString Then
+                Call tampilGrid()
+            Else
+                Call koneksi()
+                Da = New SqlDataAdapter("Select * from tblSupplier where namaSupplier like '%" & txtbxCari.Text & "%'", Conn)
+                Ds = New DataSet
+                Ds.Clear()
+                Da.Fill(Ds, "tblSupplier")
+                dgvSupplier.DataSource = (Ds.Tables("tblSupplier"))
+                Conn.Close()
+            End If
+        End If
+    End Sub
 End Class

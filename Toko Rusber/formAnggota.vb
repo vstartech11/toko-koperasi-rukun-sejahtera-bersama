@@ -180,4 +180,25 @@ Public Class formAnggota
         End If
     End Sub
 
+    Private Sub txtbxCari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtbxCari.KeyPress
+        If e.KeyChar = Chr(13) Then
+            If txtbxCari.Text = vbNullString Then
+                Call koneksi()
+                Da = New SqlDataAdapter("Select * from tblAnggota", Conn)
+                Ds = New DataSet
+                Ds.Clear()
+                Da.Fill(Ds, "tblaAnggota")
+                dgv.DataSource = (Ds.Tables("tblAnggota"))
+                Conn.Close()
+            Else
+                Call koneksi()
+                Da = New SqlDataAdapter("Select * from tblAnggota where nama like '%" & txtbxCari.Text & "%'", Conn)
+                Ds = New DataSet
+                Ds.Clear()
+                Da.Fill(Ds, "tblaAnggota")
+                dgv.DataSource = (Ds.Tables("tblAnggota"))
+                Conn.Close()
+            End If
+        End If
+    End Sub
 End Class

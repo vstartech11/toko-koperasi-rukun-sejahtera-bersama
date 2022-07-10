@@ -161,4 +161,20 @@ Public Class formDataBarang
         End If
 
     End Sub
+
+    Private Sub txtbxCari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtbxCari.KeyPress
+        If e.KeyChar = Chr(13) Then
+            If txtbxCari.Text = vbNullString Then
+                Call getData()
+            Else
+                Call koneksi()
+                Da = New SqlDataAdapter("Select * from tblBarang where namaBarang like '%" & txtbxCari.Text & "%' or barcode like '%" & txtbxCari.Text & "%'", Conn)
+                Ds = New DataSet
+                Ds.Clear()
+                Da.Fill(Ds, "tblBarang")
+                dgvBarang.DataSource = (Ds.Tables("tblBarang"))
+                Conn.Close()
+            End If
+        End If
+    End Sub
 End Class

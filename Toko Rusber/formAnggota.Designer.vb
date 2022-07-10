@@ -51,6 +51,8 @@ Partial Class formAnggota
         Me.txtbxTelp = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.cmbxStatus = New System.Windows.Forms.ComboBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtbxCari = New System.Windows.Forms.TextBox()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -318,11 +320,29 @@ Partial Class formAnggota
         Me.cmbxStatus.Size = New System.Drawing.Size(136, 24)
         Me.cmbxStatus.TabIndex = 6
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(746, 42)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(68, 16)
+        Me.Label13.TabIndex = 11
+        Me.Label13.Text = "Cari nama"
+        '
+        'txtbxCari
+        '
+        Me.txtbxCari.Location = New System.Drawing.Point(829, 39)
+        Me.txtbxCari.Name = "txtbxCari"
+        Me.txtbxCari.Size = New System.Drawing.Size(138, 22)
+        Me.txtbxCari.TabIndex = 12
+        '
         'formAnggota
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1035, 755)
+        Me.Controls.Add(Me.txtbxCari)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.btnSimpan)
         Me.Controls.Add(Me.txtbxHubAhli)
         Me.Controls.Add(Me.txtbxNamaAhli)
@@ -388,4 +408,6 @@ Partial Class formAnggota
     Friend WithEvents txtbxTelp As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents cmbxStatus As ComboBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents txtbxCari As TextBox
 End Class

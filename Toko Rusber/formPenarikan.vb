@@ -1,6 +1,14 @@
 ﻿Imports System.Data.SqlClient
 Public Class formPenarikan
     Sub awal()
+        txtbxPenarikan.Text = ""
+        txtbxId.Text = ""
+        lblId.Text = ""
+        lblNama.Text = ""
+        lblSimpanan.Text = "0"
+        txtbxId.Enabled = True
+        txtbxCari.Text = vbNullString
+        btnSimpan.Text = "CARI"
         Call getData()
         Call getID()
     End Sub
@@ -44,7 +52,7 @@ Public Class formPenarikan
                 txtbxId.Enabled = False
                 btnSimpan.Text = "TARIK"
                 Call koneksi()
-                Cmd = New SqlCommand("select tblAnggota.nama,tblDSimpanan.tSukarela from tblAnggota join tblDSimpanan on tblAnggota.noAnggota=tblDSimpanan.noAnggota where noAnggota='" & txtbxId.Text & "'", Conn)
+                Cmd = New SqlCommand("select tblAnggota.nama,tblDSimpanan.tSukarela from tblAnggota join tblDSimpanan on tblAnggota.noAnggota=tblDSimpanan.noAnggota where tblDSimpanan.noAnggota='" & txtbxId.Text & "'", Conn)
                 Rd = Cmd.ExecuteReader
                 If Rd.Read Then
                     lblNama.Text = Rd!nama
@@ -56,11 +64,38 @@ Public Class formPenarikan
                 MsgBox("Jumlah yang ditarik melebihi simpanan !")
                 txtbxPenarikan.Text = ""
                 txtbxPenarikan.Focus()
-            Else
 
+            Else
+                lblSimpanan.Text = Val(lblSimpanan.Text) - Val(txtbxPenarikan.Text)
+                Call koneksi()
+                Cmd = New SqlCommand("Update tblDSimpanan set tSukarela='" & lblSimpanan.Text & "' where noAnggota='" & txtbxId.Text & "'", Conn)
+                Cmd.ExecuteNonQuery()
+                Conn.Close()
+                Call koneksi()
+                Cmd = New SqlCommand("insert into tblPenarikan values('" & lblId.Text & "','" & Date.Now.ToString("yyyy-MM-dd") & "','" & txtbxId.Text & "','" & txtbxPenarikan.Text & "')", Conn)
+                Cmd.ExecuteNonQuery()
+                MsgBox("SUKSES BROOOOW")
+                Conn.Close()
+                Call awal()
             End If
 
         End If
 
+    End Sub
+
+    Private Sub txtbxCari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtbxCari.KeyPress
+        If e.KeyChar = Chr(13) Then
+            If txtbxCari.Text = vbNullString Then
+                Call getData()
+            Else
+                Call koneksi()
+                Da = New SqlDataAdapter("select tblPenarikan.idPenarikan,tblPenarikan.tanggal,tblAnggota.nama,tblPenarikan.jumlah from tblPenarikan join tblAnggota on tblAnggota.noAnggota=tblPenarikan.noAnggota where tblAnggota.nama like '%" & txtbxCari.Text & "%'", Conn)
+                Ds = New DataSet
+                Ds.Clear()
+                Da.Fill(Ds, "tblPenarikan")
+                dgvPenarikan.DataSource = (Ds.Tables("tblPenarikan"))
+                Conn.Close()
+            End If
+        End If
     End Sub
 End Class

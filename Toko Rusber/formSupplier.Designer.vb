@@ -35,6 +35,8 @@ Partial Class formSupplier
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnSimpan = New System.Windows.Forms.Button()
         Me.lblId = New System.Windows.Forms.Label()
+        Me.txtbxCari = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         CType(Me.dgvSupplier, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -165,11 +167,29 @@ Partial Class formSupplier
         Me.lblId.Text = "0"
         Me.lblId.Visible = False
         '
+        'txtbxCari
+        '
+        Me.txtbxCari.Location = New System.Drawing.Point(615, 31)
+        Me.txtbxCari.Name = "txtbxCari"
+        Me.txtbxCari.Size = New System.Drawing.Size(138, 22)
+        Me.txtbxCari.TabIndex = 14
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(525, 34)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(84, 16)
+        Me.Label13.TabIndex = 13
+        Me.Label13.Text = "Cari Supplier"
+        '
         'formSupplier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(859, 560)
+        Me.Controls.Add(Me.txtbxCari)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.lblId)
         Me.Controls.Add(Me.btnSimpan)
         Me.Controls.Add(Me.Label3)
@@ -203,4 +223,6 @@ Partial Class formSupplier
     Friend WithEvents btnSimpan As Button
     Friend WithEvents rdoHapus As RadioButton
     Friend WithEvents lblId As Label
+    Friend WithEvents txtbxCari As TextBox
+    Friend WithEvents Label13 As Label
 End Class

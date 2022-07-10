@@ -34,6 +34,8 @@ Partial Class formPenarikan
         Me.lblSimpanan = New System.Windows.Forms.Label()
         Me.txtbxPenarikan = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtbxCari = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         CType(Me.dgvPenarikan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -152,11 +154,29 @@ Partial Class formPenarikan
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Jumlah Ditarik"
         '
+        'txtbxCari
+        '
+        Me.txtbxCari.Location = New System.Drawing.Point(907, 54)
+        Me.txtbxCari.Name = "txtbxCari"
+        Me.txtbxCari.Size = New System.Drawing.Size(138, 22)
+        Me.txtbxCari.TabIndex = 14
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(824, 57)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(68, 16)
+        Me.Label13.TabIndex = 13
+        Me.Label13.Text = "Cari nama"
+        '
         'formPenarikan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1252, 589)
+        Me.Controls.Add(Me.txtbxCari)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.txtbxPenarikan)
         Me.Controls.Add(Me.btnSimpan)
         Me.Controls.Add(Me.txtbxId)
@@ -189,4 +209,6 @@ Partial Class formPenarikan
     Friend WithEvents lblSimpanan As Label
     Friend WithEvents txtbxPenarikan As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents txtbxCari As TextBox
+    Friend WithEvents Label13 As Label
 End Class

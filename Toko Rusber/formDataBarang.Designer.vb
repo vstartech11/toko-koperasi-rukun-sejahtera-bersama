@@ -44,6 +44,8 @@ Partial Class formDataBarang
         Me.txtbxJualBon = New System.Windows.Forms.TextBox()
         Me.cmbxKategori = New System.Windows.Forms.ComboBox()
         Me.btnSimpan = New System.Windows.Forms.Button()
+        Me.txtbxCari = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         CType(Me.dgvBarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -53,12 +55,12 @@ Partial Class formDataBarang
         Me.dgvBarang.AllowUserToAddRows = False
         Me.dgvBarang.AllowUserToDeleteRows = False
         Me.dgvBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBarang.Location = New System.Drawing.Point(86, 56)
+        Me.dgvBarang.Location = New System.Drawing.Point(86, 70)
         Me.dgvBarang.Name = "dgvBarang"
         Me.dgvBarang.ReadOnly = True
         Me.dgvBarang.RowHeadersWidth = 51
         Me.dgvBarang.RowTemplate.Height = 24
-        Me.dgvBarang.Size = New System.Drawing.Size(1031, 210)
+        Me.dgvBarang.Size = New System.Drawing.Size(1031, 196)
         Me.dgvBarang.TabIndex = 0
         '
         'GroupBox1
@@ -244,11 +246,29 @@ Partial Class formDataBarang
         Me.btnSimpan.Text = "SIMPAN"
         Me.btnSimpan.UseVisualStyleBackColor = True
         '
+        'txtbxCari
+        '
+        Me.txtbxCari.Location = New System.Drawing.Point(944, 42)
+        Me.txtbxCari.Name = "txtbxCari"
+        Me.txtbxCari.Size = New System.Drawing.Size(138, 22)
+        Me.txtbxCari.TabIndex = 16
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(861, 45)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(68, 16)
+        Me.Label13.TabIndex = 15
+        Me.Label13.Text = "Cari nama"
+        '
         'formDataBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1184, 581)
+        Me.Controls.Add(Me.txtbxCari)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.btnSimpan)
         Me.Controls.Add(Me.cmbxKategori)
         Me.Controls.Add(Me.Label8)
@@ -300,4 +320,6 @@ Partial Class formDataBarang
     Friend WithEvents txtbxJualBon As TextBox
     Friend WithEvents cmbxKategori As ComboBox
     Friend WithEvents btnSimpan As Button
+    Friend WithEvents txtbxCari As TextBox
+    Friend WithEvents Label13 As Label
 End Class
