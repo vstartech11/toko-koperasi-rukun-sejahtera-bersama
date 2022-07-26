@@ -53,6 +53,8 @@ Partial Class formAnggota
         Me.cmbxStatus = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtbxCari = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.cmbxPenjamin = New System.Windows.Forms.ComboBox()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -336,11 +338,31 @@ Partial Class formAnggota
         Me.txtbxCari.Size = New System.Drawing.Size(138, 22)
         Me.txtbxCari.TabIndex = 12
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(654, 487)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(63, 16)
+        Me.Label14.TabIndex = 13
+        Me.Label14.Text = "Penjamin"
+        '
+        'cmbxPenjamin
+        '
+        Me.cmbxPenjamin.FormattingEnabled = True
+        Me.cmbxPenjamin.Items.AddRange(New Object() {"Pilih", "Laki-Laki", "Perempuan"})
+        Me.cmbxPenjamin.Location = New System.Drawing.Point(723, 482)
+        Me.cmbxPenjamin.Name = "cmbxPenjamin"
+        Me.cmbxPenjamin.Size = New System.Drawing.Size(202, 24)
+        Me.cmbxPenjamin.TabIndex = 14
+        '
         'formAnggota
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1035, 755)
+        Me.Controls.Add(Me.cmbxPenjamin)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.txtbxCari)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.btnSimpan)
@@ -410,4 +432,6 @@ Partial Class formAnggota
     Friend WithEvents cmbxStatus As ComboBox
     Friend WithEvents Label13 As Label
     Friend WithEvents txtbxCari As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents cmbxPenjamin As ComboBox
 End Class

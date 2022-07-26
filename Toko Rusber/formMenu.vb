@@ -71,10 +71,14 @@
     End Sub
 
     Private Sub DATAHUTANGToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DATAHUTANGToolStripMenuItem.Click
-        formDHutang.ShowDialog()
+        'formDHutang.ShowDialog()
     End Sub
 
     Private Sub PENARIKANSIMPANANToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PENARIKANSIMPANANToolStripMenuItem.Click
         formPenarikan.ShowDialog()
+    End Sub
+
+    Private Sub PENJUALANToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PENJUALANToolStripMenuItem.Click
+        formPenjualan.ShowDialog()
     End Sub
 End Class

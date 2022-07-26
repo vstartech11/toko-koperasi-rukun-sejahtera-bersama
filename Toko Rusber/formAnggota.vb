@@ -8,6 +8,7 @@ Public Class formAnggota
         txtbxNik.Text = vbNullString
         txtbxPekerjaan.Text = vbNullString
         txtbxTelp.Text = vbNullString
+        cmbxPenjamin.Text = vbNullString
         cmbxKelamin.SelectedIndex = 0
         txtbxTelp.Enabled = False
         txtbxPekerjaan.Enabled = False
@@ -25,8 +26,19 @@ Public Class formAnggota
         rdoTambah.Checked = False
         rdoUbah.Checked = False
         cmbxStatus.Enabled = False
+        cmbxPenjamin.Enabled = False
         Call getCombo()
         Call getData()
+    End Sub
+    Sub getPenjamin()
+        cmbxPenjamin.Items.Clear()
+        Call koneksi()
+        Cmd = New SqlCommand("select nama from tblAnggota", Conn)
+        Rd = Cmd.ExecuteReader
+        Do While Rd.Read
+            cmbxPenjamin.Items.Add(Rd.Item(0).ToString)
+        Loop
+        Conn.Close()
     End Sub
     Sub getCombo()
         cmbxStatus.Items.Clear()
@@ -68,6 +80,7 @@ Public Class formAnggota
     Private Sub rdoTambah_CheckedChanged(sender As Object, e As EventArgs) Handles rdoTambah.CheckedChanged
         If rdoTambah.Checked = True Then
             getNomor()
+            getPenjamin()
             txtbxAlamat.Enabled = True
             txtbxHubAhli.Enabled = True
             txtbxNama.Enabled = True
@@ -78,6 +91,7 @@ Public Class formAnggota
             cmbxKelamin.Enabled = True
             btnSimpan.Text = "TAMBAH"
             txtbxTelp.Enabled = True
+            cmbxPenjamin.Enabled = True
         Else
             Call awal()
         End If
@@ -85,6 +99,7 @@ Public Class formAnggota
 
     Private Sub rdoUbah_CheckedChanged(sender As Object, e As EventArgs) Handles rdoUbah.CheckedChanged
         If rdoUbah.Checked = True Then
+            getPenjamin()
             MsgBox("Silahkan Pilih Data Dari Daftar")
             btnSimpan.Enabled = True
             btnSimpan.Text = "SIMPAN"
@@ -113,7 +128,7 @@ Public Class formAnggota
                 MsgBox("Semua kolom wajib diisi !", MsgBoxStyle.Information)
             Else
                 Call koneksi()
-                Cmd = New SqlCommand("insert into tblAnggota values('" & lblNomor.Text & "','" & txtbxNama.Text & "','" & lblTanggal.Text & "','" & txtbxNik.Text & "','" & txtbxAlamat.Text & "','" & cmbxKelamin.Text & "','" & txtbxPekerjaan.Text & "','" & txtbxTelp.Text & "','" & txtbxNamaAhli.Text & "','" & txtbxHubAhli.Text & "','" & cmbxStatus.Text & "')", Conn)
+                Cmd = New SqlCommand("insert into tblAnggota values('" & lblNomor.Text & "','" & txtbxNama.Text & "','" & lblTanggal.Text & "','" & txtbxNik.Text & "','" & txtbxAlamat.Text & "','" & cmbxKelamin.Text & "','" & txtbxPekerjaan.Text & "','" & txtbxTelp.Text & "','" & txtbxNamaAhli.Text & "','" & txtbxHubAhli.Text & "','" & cmbxStatus.Text & "','" & cmbxPenjamin.Text & "')", Conn)
                 Cmd.ExecuteNonQuery()
                 Conn.Close()
                 Call koneksi()
@@ -145,7 +160,7 @@ Public Class formAnggota
                 MsgBox("Semua kolom wajib diisi !", MsgBoxStyle.Information)
             Else
                 Call koneksi()
-                Cmd = New SqlCommand("update tblAnggota set nama='" & txtbxNama.Text & "',nikKtp='" & txtbxNik.Text & "',alamat='" & txtbxAlamat.Text & "',jKelamin='" & cmbxKelamin.Text & "',pekerjaan='" & txtbxPekerjaan.Text & "',telp='" & txtbxTelp.Text & "',namaAhli='" & txtbxNamaAhli.Text & "',hubAhli='" & txtbxHubAhli.Text & "',status='" & cmbxStatus.Text & "' where noAnggota='" & lblNomor.Text & "'", Conn)
+                Cmd = New SqlCommand("update tblAnggota set nama='" & txtbxNama.Text & "',nikKtp='" & txtbxNik.Text & "',alamat='" & txtbxAlamat.Text & "',jKelamin='" & cmbxKelamin.Text & "',pekerjaan='" & txtbxPekerjaan.Text & "',telp='" & txtbxTelp.Text & "',namaAhli='" & txtbxNamaAhli.Text & "',hubAhli='" & txtbxHubAhli.Text & "',status='" & cmbxStatus.Text & "',penjamin='" & cmbxPenjamin.Text & "' where noAnggota='" & lblNomor.Text & "'", Conn)
                 Cmd.ExecuteNonQuery()
                 MsgBox("Sukses mengubah " + txtbxNama.Text, MsgBoxStyle.Information)
                 Conn.Close()
@@ -168,6 +183,7 @@ Public Class formAnggota
             txtbxHubAhli.Text = dgv.Rows(e.RowIndex).Cells(9).Value.ToString
             cmbxStatus.Text = dgv.Rows(e.RowIndex).Cells(10).Value.ToString
 
+            cmbxPenjamin.Enabled = True
             txtbxTelp.Enabled = True
             txtbxPekerjaan.Enabled = True
             txtbxNik.Enabled = True

@@ -146,6 +146,12 @@
     <Compile Include="formPenarikan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formPenjualan.Designer.vb">
+      <DependentUpon>formPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formSimpanan.Designer.vb">
       <DependentUpon>formSimpanan.vb</DependentUpon>
     </Compile>

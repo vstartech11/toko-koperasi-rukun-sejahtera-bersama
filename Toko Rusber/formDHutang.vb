@@ -26,7 +26,8 @@ Public Class formDHutang
             Call getData()
         Else
             Call koneksi()
-            Da = New SqlDataAdapter("select tblAnggota.nama,tblHutang.tHutang,tblHutang.tglHutang from tblHutang join tblAnggota on tblAnggota.noAnggota=tblHutang.noAnggota where tblAnggota.noAnggota like '%" & txtbxCari.Text & "%' OR tblHutang.tglHutang like '%" & txtbxCari.Text & "%'", Conn)
+            Da = New SqlDataAdapter("select tblAnggota.nama,tblHutang.tHutang,tblHutang.tglHutang from tblHutang join tblAnggota on tblAnggota.noAnggota=tblHutang.noAnggota where tblAnggota.nama
+like '%" & txtbxCari.Text & "%'", Conn)
             Ds = New DataSet
             Ds.Clear()
             Da.Fill(Ds, "tblHutang")
